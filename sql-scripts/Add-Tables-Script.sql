@@ -13,7 +13,7 @@ USE `tcdatabase`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-DROP TABLE IF EXISTS `book`;
+DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
@@ -27,8 +27,8 @@ CREATE TABLE `user` (
 
 
 INSERT INTO `user` VALUES
-    (1, 'Ken', 'Client', 'example1user@email.com')
-    (1, 'Lisa', 'Client', 'example1user2@email.com'),;
+    (1, 'Ken', 'Client', 'example1user@email.com'),
+    (2, 'Lisa', 'Client', 'example2user@email.com');
 
 DROP TABLE IF EXISTS `exercise`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -41,6 +41,7 @@ CREATE TABLE `exercise` (
   `description` VARCHAR(255) DEFAULT NULL,
   `isDone` BOOLEAN DEFAULT NULL,
   `exercise_type` varchar(45) DEFAULT NULL,
+  `intensity_type` varchar(45) DEFAULT NULL,
   `distance` INT DEFAULT NULL,
 
   PRIMARY KEY (`id`)
