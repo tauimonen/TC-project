@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `reactlibrarydatabase` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE  IF NOT EXISTS `tcdatabase` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `tcdatabase`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -30,24 +30,30 @@ INSERT INTO `user` VALUES
     (1, 'Ken', 'Client', 'example1user@email.com')
     (1, 'Lisa', 'Client', 'example1user2@email.com'),;
 
-DROP TABLE IF EXISTS `review`;
+DROP TABLE IF EXISTS `exercise`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `review` (
+CREATE TABLE `exercise` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
-  `user_email` varchar(45) DEFAULT NULL,
+  `user_id` BIGINT(20) NOT NULL,
   `date` datetime(6) DEFAULT NULL,
-  `rating` decimal (3,2) DEFAULT NULL,
-  `book_id` BIGINT(20) DEFAULT NULL,
-  `review_description` text DEFAULT NULL,
+  `duration` INT DEFAULT NULL,
+  `description` VARCHAR(255) DEFAULT NULL,
+  `isDone` BOOLEAN DEFAULT NULL,
+  `exercise_type` varchar(45) DEFAULT NULL,
+  `distance` INT DEFAULT NULL,
+
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
-INSERT INTO `review` VALUES 
-	(1, 'example1user@email.com', NOW(), 4, 1, 'First book is pretty good book overall'),
-	(2, 'example2user@email.com', NOW(), 4.5, 2, 'Second books is pretty good book overall');
+INSERT INTO `exercise` (`user_id`, `date`, `duration`, `description`, `isDone`, `exercise_type`, `distance`, `intensity_type`) VALUES
+(1, '2023-01-15 08:30:00', 30, 'Morning jog', true, 'RUN', 5000, 'MODERATE'),
+(2, '2023-02-02 18:45:00', 45, 'Evening workout', true, 'WEIGHT_TRAINING', null, 'WORKOUT'),
+(3, '2023-03-10 12:00:00', 30, 'Quick cardio', false, 'CYCLING', 10000, 'EASY'),
+(4, '2023-04-25 09:00:00', 40, 'Intense interval training', true, 'WORKOUT', 7000, 'WORKOUT'),
+(5, '2023-05-08 16:15:00', 120, 'Long run', true, 'RUN', 12000, 'LONG');
 
 
 UNLOCK TABLES;

@@ -11,6 +11,9 @@ public class Exercise {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "user_id")
+    private Long userId;
+
     @Column(name = "duration")
     private int duration;
 
@@ -23,7 +26,7 @@ public class Exercise {
     @Column(name = "done")
     private boolean isDone;
 
-    @Column(name = "exercise_type")
+    @Enumerated(EnumType.STRING)
     private ExerciseType exerciseType;
 
     @Column(name = "distance")
