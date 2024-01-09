@@ -5,8 +5,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class Exercise {
+public class Exercise {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +22,15 @@ public abstract class Exercise {
 
     @Column(name = "done")
     private boolean isDone;
+
+    @Column(name = "exercise_type")
+    private ExerciseType exerciseType;
+
+    @Column(name = "distance")
+    private int distance;
+
+    @Enumerated(EnumType.STRING)
+    private IntensityType intensityType;
 
     protected Exercise() {
     }

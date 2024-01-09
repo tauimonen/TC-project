@@ -1,12 +1,12 @@
 package com.uicode.tcproject.entity;
 
-public enum RunType {
+public enum IntensityType {
     VERY_EASY,
     EASY,
     MODERATE,
     WORKOUT,
     TEMPO,
-    LONG_RUN,
+    LONG,
     RACE,
 
     // Add more types as needed
