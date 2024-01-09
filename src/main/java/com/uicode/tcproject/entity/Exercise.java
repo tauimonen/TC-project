@@ -1,10 +1,13 @@
 package com.uicode.tcproject.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 
 @Entity
+@Table(name = "exercise")
+@Data
 public class Exercise {
 
     @Id
@@ -23,7 +26,7 @@ public class Exercise {
     @Column(name = "date")
     private Date date;
 
-    @Column(name = "done")
+    @Column(name = "is_done")
     private boolean isDone;
 
     @Enumerated(EnumType.STRING)
@@ -46,5 +49,4 @@ public class Exercise {
         this.isDone = isDone;
     }
 
-    // Getter and Setter methods
 }

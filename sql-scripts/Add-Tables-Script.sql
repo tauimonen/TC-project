@@ -39,7 +39,7 @@ CREATE TABLE `exercise` (
   `date` datetime(6) DEFAULT NULL,
   `duration` INT DEFAULT NULL,
   `description` VARCHAR(255) DEFAULT NULL,
-  `isDone` BOOLEAN DEFAULT NULL,
+  `is_done` BOOLEAN DEFAULT NULL,
   `exercise_type` varchar(45) DEFAULT NULL,
   `intensity_type` varchar(45) DEFAULT NULL,
   `distance` INT DEFAULT NULL,
@@ -49,11 +49,11 @@ CREATE TABLE `exercise` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
-INSERT INTO `exercise` (`user_id`, `date`, `duration`, `description`, `isDone`, `exercise_type`, `distance`, `intensity_type`) VALUES
+INSERT INTO `exercise` (`user_id`, `date`, `duration`, `description`, `is_done`, `exercise_type`, `distance`, `intensity_type`) VALUES
 (1, '2023-01-15 08:30:00', 30, 'Morning jog', true, 'RUN', 5000, 'MODERATE'),
-(2, '2023-02-02 18:45:00', 45, 'Evening workout', true, 'WEIGHT_TRAINING', null, 'WORKOUT'),
+(2, '2023-02-02 18:45:00', 45, 'Evening workout', true, 'WEIGHT_TRAINING', 0, 'WORKOUT'),
 (3, '2023-03-10 12:00:00', 30, 'Quick cardio', false, 'CYCLING', 10000, 'EASY'),
-(4, '2023-04-25 09:00:00', 40, 'Intense interval training', true, 'WORKOUT', 7000, 'WORKOUT'),
+(4, '2023-04-25 09:00:00', 40, 'Intense interval training', true, 'RUN', 7000, 'WORKOUT'),
 (5, '2023-05-08 16:15:00', 120, 'Long run', true, 'RUN', 12000, 'LONG');
 
 
