@@ -1,13 +1,14 @@
 package com.uicode.tcproject.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-
+import lombok.*;
 import java.util.Date;
 
 @Entity
+@Getter
+@Setter
+@ToString
 @Table(name = "exercise")
-@Data
 public class Exercise {
 
     @Id

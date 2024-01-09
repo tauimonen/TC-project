@@ -7,11 +7,10 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "user")
 @Getter
 @Setter
 @ToString
-
+@Table(name = "user")
 public class User {
 
     @Id
