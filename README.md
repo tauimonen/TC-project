@@ -68,8 +68,9 @@ The Training Calendar application is a user-centric platform designed to facilit
    - Design entity classes with JPA annotations.
    - Define relationships between entities (OneToOne, OneToMany, ManyToMany).
    - Implement data initialization scripts or classes.
-   - Configure database migration tool (Flyway or Liquibase).
+   - Configure database migration tool.
    - Apply data validation, constraints, and unit testing.
+     - If your JpaRepository interface mainly uses the default methods provided by Spring Data JPA, and the queries are simple CRUD operations, you might rely on the testing done by the Spring Data JPA team. In this case, writing additional tests might be redundant. If you have custom query methods defined in your JpaRepository, especially complex queries involving joins, aggregations, or specific business logic, it's beneficial to write tests to ensure these queries return the expected results.
    - Integrate data models with the service layer.
 
 3. **Implement User Authentication with Okta OpenID Connect:**

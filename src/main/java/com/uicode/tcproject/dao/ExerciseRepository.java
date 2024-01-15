@@ -5,6 +5,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ExerciseRepository extends JpaRepository<Exercise, Long> {
 
-    // find exercises by userId, return List<Exercise>
-
 }

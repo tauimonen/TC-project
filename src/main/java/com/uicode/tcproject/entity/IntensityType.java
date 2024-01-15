@@ -8,6 +8,4 @@ public enum IntensityType {
     TEMPO,
     LONG,
     RACE,
-
-    // Add more types as needed
 }
