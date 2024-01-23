@@ -284,3 +284,17 @@ Integration and Testing:
 2. Conduct end-to-end testing and user acceptance testing.
 3. Address identified issues and perform load testing.
 4. Prepare for deployment and configure the production environment.
+
+## Authentication
+
+- Create a developer account at okta.com
+  Add OpenID Connect client app in Okta: Create a new application in the Developer Account.
+  Select option for OIDC: Open ID connect > Single-Page Application
+- Set up app configurarion for OpenID Connect (clientId & issuer)
+- Install Okta SDK dependecies: Sign-In Widged, Okta React SDK, Okta JavaScript SDK
+- Integrate Okta Sign-In Widged
+- Add Configurarions to our application
+- Create new Security Routes & Navigation Login/Logout (OAuth 2.0 API)
+
+Using OIDC - OpenID Connect
+Token-based OAuth 2.0 authentication for Single Sign-On (SSO) through API endpoints. Recommended if you intend to build a custom app integration with the Okta Sign-In Widget.
